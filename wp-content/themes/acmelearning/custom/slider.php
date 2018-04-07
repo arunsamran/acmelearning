@@ -124,7 +124,7 @@
 										data-paddingleft="[0,0,0,0]"
 
 										style="z-index: 8; white-space: nowrap; background-color:rgba(0, 0, 0, 0) !important;">
-										<a href="about-us" class="site-button">READ MORE </a>
+										<!-- <a href="about-us" class="site-button">READ MORE </a> -->
 									</div> 
 									<div class="tp-caption" 
 										id="slide-100-layer-6" 
@@ -143,7 +143,7 @@
 										data-paddingleft="[0,0,0,0]"
 
 										style="z-index: 8; white-space: nowrap; background-color:rgba(0, 0, 0, 0) !important;">
-										<a href="contact-us" class="site-button ">Contact Us</a>
+										<!-- <a href="contact-us" class="site-button ">Contact Us</a> -->
 									</div> 
 								</li><!-- SLIDE  -->
 								<li data-index="rs-200" data-transition="parallaxvertical" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="<?php bloginfo('template_url'); ?>/images/main-slider/college/slide2.jpg"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="A STUDY ON HAPPINESS" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="">
@@ -267,7 +267,7 @@
 										data-paddingleft="[0,0,0,0]"
 
 										style="z-index: 8; white-space: nowrap; background-color:rgba(0, 0, 0, 0) !important;">
-										<a href="about-us" class="site-button">READ MORE </a>
+										<!-- <a href="about-us" class="site-button">READ MORE </a> -->
 									</div> 
 									<div class="tp-caption" 
 										id="slide-200-layer-6" 
@@ -288,7 +288,7 @@
 										data-paddingleft="[0,0,0,0]"
 
 										style="z-index: 8; white-space: nowrap; background-color:rgba(0, 0, 0, 0) !important;">
-										<a href="contact-us" class="site-button ">Contact Us</a>
+										<!-- <a href="contact-us" class="site-button ">Contact Us</a> -->
 									</div> 
 								</li><!-- SLIDE  -->
 								<li data-index="rs-300" data-transition="parallaxvertical" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="<?php bloginfo('template_url'); ?>/images/main-slider/college/slide3.jpg"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="A STUDY ON HAPPINESS" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="">
@@ -410,7 +410,7 @@
 										data-paddingleft="[0,0,0,0]"
 
 										style="z-index: 8; white-space: nowrap; background-color:rgba(0, 0, 0, 0) !important;">
-										<a href="about-us" class="site-button">READ MORE </a>
+										<!-- <a href="about-us" class="site-button">READ MORE </a> -->
 									</div> 
 									<div class="tp-caption" 
 										id="slide-300-layer-6" 
@@ -431,7 +431,7 @@
 										data-paddingleft="[0,0,0,0]"
 
 										style="z-index: 8; white-space: nowrap; background-color:rgba(0, 0, 0, 0) !important;">
-										<a href="contact-us" class="site-button ">Contact Us</a>
+										<!-- <a href="contact-us" class="site-button ">Contact Us</a> -->
 									</div> 
 								</li><!-- SLIDE  -->
 							</ul>

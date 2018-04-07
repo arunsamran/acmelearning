@@ -67,19 +67,32 @@
 					<div class="col-md-2">
 						<div class="logo-header "><a href="index.html"><img src="<?php bloginfo('template_url'); ?>/images/logo-white.png" width="193" height="89" alt=""></a></div>
 					</div>
-					<div class="col-md-6">
+					<div class="col-md-4">
 					<span class='section-head  text-white'><h1 style='padding-top:35px;font-size:23px !important;font-weight: 600 !important;'>Widening Your Knowledge</h1></span>
 					</div>
 					
-					<div class="col-md-4">
+					<div class="col-md-6">
 						<ul class="social-line text-center pull-right">
 							<li><a target="_blank" href="https://www.facebook.com/ACME-Learning-2112227632125891/" class="fa fa-facebook"></a></li>
 							<li><a target="_blank" href="https://twitter.com/acme_learning" class="fa fa-twitter"></a></li>
 							<li><a target="_blank" href="https://www.instagram.com/acmelearning/" class="fa fa-instagram"></a></li>
-							<li><a target="_blank" href="https://plus.google.com/u/0/111022261421186555692" class="fa fa-google-plus"></a></li>
+							<li><a target="_blank" href="https://plus.google.com/u/0/111022261421186555692" class="fa fa-google-plus"></a></li>			
+							<li>
+							<span class="site-button yellow text-white radius-xl  m-r15" type="button" style="margin-top:5px;">  
+									<h5 class="m-a0">Login</h5> 
+									
+								</span>
+							</li>
+							<li>
+								<div class="extra-nav">
+								<div class="extra-cell" style="margin-top:-30px;">
+									<button id="quik-search-btn" type="button" class="site-button yellow text-white radius-xl  m-r15"><i class="fa fa-search"></i></button>
+								</div>
+							</div>
+						
+							</li>
 						</ul> 
-					</div>
-					
+					</div>				
 				</div>
 			</div>
 		</div>	
@@ -93,7 +106,15 @@
 						<div class="logo-header mostion">
 						<?php //bloginfo('name'); ?>
 						<?php //bloginfo('description'); ?>
-						<a href="index.html"><span class='section-head  text-white'><h1 style='padding-top:15px;font-size:40px !important;font-weight: 800 !important;'>ACME</h1></span><img src="<?php bloginfo('template_url'); ?>/images/logo-white1.png" width="193" height="89" alt=""></a></div>
+						<div class="row">
+						</div>
+						<a href="index.html">
+						<?php if(wp_is_mobile()){ ?>
+									<img src="<?php bloginfo('template_url'); ?>/images/logo-white1.png" width="193" height="89" alt="">
+						<?php }else{ ?>
+									<img src="<?php bloginfo('template_url'); ?>/images/logo-scroll.png" alt="">
+						<?php } ?>
+						</a></div>
 						
 						<!-- nav toggle button -->
 						<button data-target=".header-nav" data-toggle="collapse" type="button" class="navbar-toggle collapsed">

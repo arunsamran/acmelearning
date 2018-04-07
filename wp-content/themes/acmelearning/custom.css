@@ -13,12 +13,13 @@
 .acmeclass .header-style-4 .social-line li a{color:#fff !important;}
 .acmeclass .tnp-submit{margin-top:15px;}
 .acmeclass .header-style-4 .is-fixed .mostion {display:block !important} 
-.acmeclass .header-style-4 .is-fixed .mostion img{display:none !important}
+.acmeclass .header-style-4 .is-fixed .mostion  img{margin-top:0px !important;} 
 .acmeclass .is-fixed   .logo-header span{letter-spacing:normal !important}
+
+/* responive */
 @media only screen and (max-width: 767px){
 .acmeclass .logo-header span{display:none !important}
 .acmeclass .header-style-4 .mostion{display:block !important}	
 .acmeclass .logo-header img{height:auto !important; padding-top:22px; max-width:150px !important}	
 .acmeclass .header-style-4 .header-nav.navbar-collapse ul{float:none !important}
-
 }
