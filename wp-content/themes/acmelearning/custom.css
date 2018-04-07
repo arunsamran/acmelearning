@@ -1,0 +1,24 @@
+/*Custom css for this ACME */
+
+.acmeclass .header-style-4 .header-nav.navbar-collapse ul {
+	float:right;	
+}
+
+.acmeclass .logo-header img{position:absolute; margin-top:-20px;}
+.acmeclass .contact-info li:last-child{margin-top:20px !important;}
+.acmeclass .logo-header{display:inherit !important}
+.acmeclass .header-style-4 .mostion{display:none !important}
+.acmeclass .contact-info li{margin-top:15px !important; }
+.acmeclass .header-style-4.dark .contact-info span {color:#fff !important;}
+.acmeclass .header-style-4 .social-line li a{color:#fff !important;}
+.acmeclass .tnp-submit{margin-top:15px;}
+.acmeclass .header-style-4 .is-fixed .mostion {display:block !important} 
+.acmeclass .header-style-4 .is-fixed .mostion img{display:none !important}
+.acmeclass .is-fixed   .logo-header span{letter-spacing:normal !important}
+@media only screen and (max-width: 767px){
+.acmeclass .logo-header span{display:none !important}
+.acmeclass .header-style-4 .mostion{display:block !important}	
+.acmeclass .logo-header img{height:auto !important; padding-top:22px; max-width:150px !important}	
+.acmeclass .header-style-4 .header-nav.navbar-collapse ul{float:none !important}
+
+}

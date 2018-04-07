@@ -1,0 +1,18 @@
+/*
+Theme Name: education
+Theme URI: http://www.education.com
+Author: Ravikumar
+Description: The theme for education template
+Version: 1.0
+Tags: Blog, Education, CSS3, HTML5
+*/
+
+.acme-edu .logo-header img{position:absolute; padding:10px 0px}
+.acme-edu .contact-info li{padding: 0px !important;}
+.acme-edu .contact-info li:last-child{margin-top:20px !important;}
+.acme-edu .logo-header{display:inherit !important}
+.acme-edu .header-style-4 .mostion{display:none !important}
+@media only screen and (max-width: 767px){
+.acme-edu .header-style-4 .mostion{display:block !important}	
+.acme-edu .logo-header img{height:auto !important; padding:0px; max-width:150px !important}	
+}
