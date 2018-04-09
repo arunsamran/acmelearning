@@ -15,7 +15,26 @@
 .acmeclass .header-style-4 .is-fixed .mostion {display:block !important} 
 .acmeclass .header-style-4 .is-fixed .mostion  img{margin-top:0px !important;} 
 .acmeclass .is-fixed   .logo-header span{letter-spacing:normal !important}
-
+.footer-top{clear: both}
+.acmeclass .page-wraper{background: #fff !important}
+.nd_learning_section{}
+.acmeclass .nd_learning_section h3 {margin: 0px; font-size: 18px !important; padding-bottom: 10px;}
+.acmeclass .nd_learning_section h3  a{color: #3d474a;}
+.acmeclass .nd_learning_section p, .acmeclass .nd_learning_section p a{color:#767676 !important; font-family: 'Open Sans', sans-serif;}
+.acmeclass .nd_learning_section.nd_learning_height_20, .acmeclass .nd_learning_tabs.nd_learning_section .nd_learning_section.nd_learning_height_30, .acmeclass .nd_learning_tabs.nd_learning_section .nd_learning_section.nd_learning_height_40{display:none}
+.acmeclass .nd_learning_bg_green{background-color: #d8a409; padding: 10px 20px;	display: inline-block;	font-size: 14px; border-radius: 35px}
+.acmeclass .nd_learning_border_1_solid_grey{border: 1px solid #eee}
+.acmeclass .nd_learning_section h5{margin: 0px;}
+#nd_learning_single_course_teachers{padding-top: 35px;}
+.nd_learning_tabs ul{margin-bottom: 25px;}
+.acmeclass .nd_learning_border_top_1_solid_grey.nd_learning_padding_40_20{border: 1px solid #eee; margin-top: 25px;}
+.acmeclass .nd_options_color_grey{margin-bottom: 15px !important;}
+.acmeclass .nd_learning_border_top_1_solid_grey.nd_learning_padding_40_20 a{margin-bottom: 20px;}
+.acmeclass .nd_learning_border_top_1_solid_grey.nd_learning_padding_40_20 p{margin-bottom: 0px !important}
+.acmeclass .nd_learning_width_33_percentage{margin-top: 20px;}
+.acmeclass .nd_learning_width_33_percentage input.nd_learning_width_100_percentage{padding:10px 25px !important}
+.acmeclass .site-button { background-color: #EFBB20 !important;}
+.nd_learning_background_size_cover .nd_learning_display_inline_block p{ color: #fff !important}
 /* responive */
 @media only screen and (max-width: 767px){
 .acmeclass .logo-header span{display:none !important}
