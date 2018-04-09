@@ -374,7 +374,8 @@ if(have_posts()) :
 			<div class="nd_learning_section nd_learning_height_50"></div>
 
 			<div class="nd_learning_section">
-
+            <div class="container">
+			<div class="row">
 				<div class="nd_learning_width_66_percentage nd_learning_width_100_percentage_responsive nd_learning_float_left nd_learning_padding_15 nd_learning_box_sizing_border_box">
 					
                     ';
@@ -561,7 +562,7 @@ if(have_posts()) :
 
 				$nd_learning_str .= '</div>
 
-			</div>
+			</div></div></div>
 
 			<div class="nd_learning_section nd_learning_height_50"></div>
 

@@ -117,7 +117,7 @@ function nd_learning_single_course_add_default_tab_list_content(){
 		                            <div class="nd_learning_section nd_learning_height_5"></div>
 		                            <h5 class="nd_options_color_grey">'.$nd_learning_meta_box_teacher_role.'</h5>
 		                            <div class="nd_learning_section nd_learning_height_20"></div>
-		                            <a style="background-color:'.$nd_learning_meta_box_teacher_color.';" class="nd_learning_display_inline_block nd_learning_color_white_important nd_options_first_font nd_learning_padding_8 nd_learning_border_radius_3 nd_learning_font_size_13" href="'.$nd_learning_teacher_permalink.'">
+		                            <a style="background-color:'.$nd_learning_meta_box_teacher_color.';" class="site-button radius-xl m-r15 nd_learning_display_inline_block nd_learning_color_white_important nd_options_first_font nd_learning_padding_8 nd_learning_border_radius_3 nd_learning_font_size_13" href="'.$nd_learning_teacher_permalink.'">
 		                            	'.__('VIEW PROFILE','nd-learning').'
 		                            </a>
 		                          
@@ -397,7 +397,8 @@ if(have_posts()) :
 
 
 	    	<div class="nd_learning_section nd_learning_height_50"></div>
-
+			<div class="container">
+			<div class="row">
 	    	<div class="nd_learning_section">
 
 	    		<div class="nd_learning_width_66_percentage nd_learning_width_100_percentage_responsive nd_learning_float_left nd_learning_padding_15 nd_learning_box_sizing_border_box">';
@@ -755,7 +756,7 @@ $nd_learning_result = '</div>
 
 $nd_learning_result .= '</div>
 
-	    	</div>
+	    	</div></div></div>
 
 
 	    	<div class="nd_learning_section nd_learning_height_50"></div>

@@ -152,6 +152,8 @@ if ( $nd_learning_arrive_from_advsearch == 'true' ) {
 
 	$nd_learning_archive_result .= '
 	<div class="nd_learning_section nd_learning_height_50"></div>
+	<div class="container">
+	<div class="row">
 	<div class="nd_learning_section nd_learning_masonry_content">
 
 	';
@@ -194,7 +196,7 @@ if ( $nd_learning_arrive_from_advsearch == 'true' ) {
 		                    <div class="nd_learning_section nd_learning_height_20"></div> 
 		                    <p><a class="" href="'.$nd_learning_permalink.'">'.$nd_learning_excerpt.'</a></p>
 		                    <div class="nd_learning_section nd_learning_height_20"></div>
-		                    <a class="nd_learning_bg_green nd_learning_display_inline_block nd_learning_color_white_important nd_options_first_font nd_learning_padding_8 nd_learning_border_radius_3 nd_learning_font_size_13" href="'.$nd_learning_permalink.'">'.__('READ MORE','nd-learning').'</a>
+		                    <a class="site-button radius-xl m-r15 nd_learning_bg_green nd_learning_display_inline_block nd_learning_color_white_important nd_options_first_font nd_learning_padding_8 nd_learning_border_radius_3 nd_learning_font_size_13" href="'.$nd_learning_permalink.'">'.__('READ MORE','nd-learning').'</a>
 
 		                </div>
 
@@ -213,7 +215,7 @@ if ( $nd_learning_arrive_from_advsearch == 'true' ) {
 	//end loop
 
 
-	$nd_learning_archive_result .= '</div><div class="nd_learning_section nd_learning_height_50"></div>';
+	$nd_learning_archive_result .= '</div></div></div><div class="nd_learning_section nd_learning_height_50"></div>';
 
 
 	echo $nd_learning_archive_result;
