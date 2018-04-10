@@ -35,6 +35,15 @@
 .acmeclass .nd_learning_width_33_percentage input.nd_learning_width_100_percentage{padding:10px 25px !important}
 .acmeclass .site-button { background-color: #EFBB20 !important;}
 .nd_learning_background_size_cover .nd_learning_display_inline_block p{ color: #fff !important}
+.sjb-page .bootstrap-select .dropdown-toggle{border: 0px !important; height:auto !important}
+.sjb-page .bootstrap-select .dropdown-toggle:hover, .sjb-page .bootstrap-select .dropdown-toggle:focus{border: 0px !important; color:#333}
+.sjb-page .sjb-filters{overflow: visible !important}
+.sjb-page .btn-primary, .sjb-page .btn-primary:hover, .sjb-page .btn-primary:active:hover, .sjb-page .btn-primary:active:focus, .sjb-page .sjb-detail .jobpost-form .file div, .sjb-page .sjb-detail .jobpost-form .file:hover div{background-color: #EFBB20 !important;}
+.sjb-page .list-data .job-type, .sjb-page .list-data .job-location, .sjb-page .list-data .job-date{color: #029EB7 !important}
+.sjb-page .list-data .job-description p{font-size: 14px !important;}
+.sjb-pad-top{padding-top:80px;}
+input#applicant-resume {border: 0px none !important; height: inherit; box-shadow: none; padding: 0px !important; }
+#sjb-form-padding-button button{padding:12px 35px !important}
 /* responive */
 @media only screen and (max-width: 767px){
 .acmeclass .logo-header span{display:none !important}
