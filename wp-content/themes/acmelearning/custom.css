@@ -46,8 +46,11 @@ input#applicant-resume {border: 0px none !important; height: inherit; box-shadow
 #sjb-form-padding-button button{padding:12px 35px !important}
 /* responive */
 @media only screen and (max-width: 767px){
-.acmeclass .logo-header span{display:none !important}
+.acmeclass .logo-header span, .is-fixed .mobile-relative, .mobile-fixed{display:none !important}
 .acmeclass .header-style-4 .mostion{display:block !important}	
 .acmeclass .logo-header img{height:auto !important; padding-top:22px; max-width:150px !important}	
+.mobile-relative{display:block;}
 .acmeclass .header-style-4 .header-nav.navbar-collapse ul{float:none !important}
+.is-fixed .mobile-fixed{display:block !important;}
+.acmeclass .logo-header img.mobile-fixed{padding-top:6px;}
 }

@@ -110,7 +110,8 @@
 						</div>
 						<a href="index.html">
 						<?php if(wp_is_mobile()){ ?>
-									<img src="<?php bloginfo('template_url'); ?>/images/logo-white1.png" width="193" height="89" alt="">
+									<img class="mobile-relative" src="<?php bloginfo('template_url'); ?>/images/logo-white1.png" width="193" height="89" alt="">
+                                    <img class="mobile-fixed" src="<?php bloginfo('template_url'); ?>/images/logo-scroll.png" width="193" height="89" alt="">
 						<?php }else{ ?>
 									<img src="<?php bloginfo('template_url'); ?>/images/logo-scroll.png" alt="">
 						<?php } ?>
