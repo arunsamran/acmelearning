@@ -404,6 +404,9 @@ class N2SmartSliderSlide {
     private function _removevarlink($s) {
         return preg_replace('/<a href=\"(.*?)\">(.*?)<\/a>/', '', $s);
     }
+    private function _removelinebreaks($s) {
+        return preg_replace('/\r?\n|\r/', '', $s);
+    }
 
     public function getTitle() {
         return $this->fill($this->title);

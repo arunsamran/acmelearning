@@ -4,7 +4,7 @@ Tags: slider, gallery slider, image slider, layer slider, responsive slider, sli
 Donate link: https://sites.fastspring.com/nextend/product/smartslider3donate
 Requires at least: 4.6
 Tested up to: 4.9
-Stable tag: 3.2.13
+Stable tag: 3.2.14
 Requires PHP: 5.4
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -192,6 +192,14 @@ Of course! Smart Slider use protocol relative urls which works fine on http:// a
 9. Layer slider with layers styles. Made with FREE version.
 
 == Changelog ==
+
+= 3.2.14 - 05. April 2018. =
+* Feature: Visual Composer support added
+* Feature: Remove line breaks for generator dynamic variables
+* Feature: Removed Fade on load memory limit
+* Fix: ACF version 1 and 2 compatibility
+* Fix: WooCommerce product page
+* Fix: Check if slider visible bug
 
 = 3.2.13 - 14. February 2018. =
 * Feature: Widget areas in WordPress

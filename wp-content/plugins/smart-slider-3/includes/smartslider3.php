@@ -47,6 +47,8 @@ class SmartSlider3 {
 
         add_action('vc_after_set_mode', 'SmartSlider3::visualComposer');
 
+        add_action('vcv:boot', 'SmartSlider3::visualComposer2');
+
         if (class_exists('FLBuilderModel', false)) {
             SmartSlider3::beaverBuilder();
         }
@@ -264,6 +266,7 @@ class SmartSlider3 {
 
         update_option("n2_ss3_version", N2SS3::$version);
 
+
         return true;
     }
 
@@ -333,6 +336,10 @@ class SmartSlider3 {
 
     public static function visualComposer() {
         require_once dirname(__FILE__) . '/integrations/VisualComposer.php';
+    }
+
+    public static function visualComposer2() {
+        require_once dirname(__FILE__) . '/integrations/VisualComposer2.php';
     }
 
     public static function elementor() {

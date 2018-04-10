@@ -86,7 +86,7 @@ class N2Wordpress {
         }
 
         if (self::$nextend_css != '' || self::$nextend_js != '') {
-            $parts = preg_split('/<\/head>/', $buffer, 2);
+            $parts = preg_split('/<\/head[\s]*>/', $buffer, 2);
 
             return implode(self::$nextend_css . self::$nextend_js . '</head>', $parts);
         }
