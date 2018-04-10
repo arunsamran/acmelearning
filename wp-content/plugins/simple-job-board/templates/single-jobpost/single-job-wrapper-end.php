@@ -15,6 +15,8 @@ ob_start();?>
         <div class="clearfix"></div>
     </div>
 </div>
+</div>
+</div>
 <!-- End: Jobs Detail Page Wrapper -->
 
 <?php

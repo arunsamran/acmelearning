@@ -12,8 +12,11 @@
 ob_start();
 ?>
 <!-- Start: Jobs Listing Wrapper -->
-<div class="sjb-page">
+
+<div class="sjb-page sjb-pad-top">
     <div class="sjb-detail">
+    <div class="container">
+<div class="row">
         <div class="list-data">
             <?php
 
