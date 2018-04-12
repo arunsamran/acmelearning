@@ -44,6 +44,17 @@
 .sjb-pad-top{padding-top:80px;}
 input#applicant-resume {border: 0px none !important; height: inherit; box-shadow: none; padding: 0px !important; }
 #sjb-form-padding-button button{padding:12px 35px !important}
+.acme-contentpad .blog-post.blog-md{padding-top:35px; overflow:auto}
+.image-outer{border:1px solid #ddd; padding:10px; display:block; -webkit-box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.65);
+-moz-box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.65);
+box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.65);}
+.acme-contentpad .rdx-post-title h3.post-title{margin-top:0px;}
+.acme-contentpad .rdx-tabs .nav-tabs > li > a i{color:#029EB7;}
+.acme-contentpad .rdx-tabs.border-top .nav-tabs > li.active > a{border-top:2px solid #029EB7}
+.acme-contentpad .tab-pane{border-left:1px solid #ddd; border-right:1px solid #ddd; border-bottom:1px solid #ddd; padding:25px !important; overflow:auto}
+.acme-contentpad .tab-pane table h3{margin:0px !important; font-size:16px;}
+.acme-contentpad table.table-bordered td, .acme-contentpad table.table-bordered td img.nd_learning_float_right{vertical-align:middle !important}
+.acme-contentpad table.table-bordered td img.nd_learning_float_right{float:none; text-align:right; padding-right:15px; height:30px;}
 /* responive */
 @media only screen and (max-width: 767px){
 .acmeclass .logo-header span, .is-fixed .mobile-relative, .mobile-fixed{display:none !important}

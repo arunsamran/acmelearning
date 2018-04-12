@@ -416,12 +416,12 @@ if(have_posts()) :
 		?>
 
  <!-- contact area -->
-        <div class="content-area">
+        <div class="content-area acme-contentpad">
             <!-- Product details -->
             <div class="container woo-entry">
                 <div class="row m-b30">
                     <div class="blog-post blog-md date-style-2">
-                        <div class="col-md-4 col-sm-4 m-b30"> <a href="#"><img src="<?php echo $nd_learning_image_src; ?>" alt=""></a> </div>
+                        <div class="col-md-4 col-sm-4 m-b30"><span class="image-outer"> <a href="#"><img src="<?php echo $nd_learning_image_src; ?>" alt=""></a></span> </div>
                         <div class="col-md-8 col-sm-8">
                             <div class="rdx-post-title ">
                                 <h3 class="post-title"><a href="#"><?php echo $nd_learning_title_course; ?></a></h3>
@@ -446,27 +446,27 @@ if(have_posts()) :
                                 <div id="graphic-design-1" class="tab-pane">
                                      <table class="table table-bordered" >
                                 <tr>
-                                    <td><h3>Price<img alt="" class="nd_learning_float_right" width="40" height="40" src="<?php echo plugins_url();?>/nd-learning/assets/img/icons/icon-price-grey.svg"></h3></td>
+                                    <td><h3><img alt="" class="nd_learning_float_right" width="40" height="40" src="<?php echo plugins_url();?>/nd-learning/assets/img/icons/icon-price-grey.svg">Price</h3></td>
                                     <td><?php echo $nd_learning_meta_box_price; ?></td>
                                 </tr>
                                 <tr>
-                                    <td><h3>Availability<img alt="" class="nd_learning_float_right" width="40" height="40" src="<?php echo plugins_url();?>/nd-learning/assets/img/icons/icon-availability-grey.svg"></h3></td>
+                                    <td><h3><img alt="" class="nd_learning_float_right" width="40" height="40" src="<?php echo plugins_url();?>/nd-learning/assets/img/icons/icon-availability-grey.svg">Availability</h3></td>
                                     <td><?php echo $nd_learning_meta_box_max_availability; ?></td>
                                 </tr>
                                 <tr>
-                                    <td><h3>Tutor<img alt="" class="nd_learning_float_right" width="40" height="40" src="<?php echo plugins_url();?>/nd-learning/assets/img/icons/icon-availability-grey.svg"></h3></td>
+                                    <td><h3><img alt="" class="nd_learning_float_right" width="40" height="40" src="<?php echo plugins_url();?>/nd-learning/assets/img/icons/icon-availability-grey.svg">Tutor</h3></td>
                                     <td><?php echo $nd_learning_teacher_name; ?><a href='<?php echo $nd_learning_teacher_permalink; ?>' target='_blank' > <button class="site-button yellow radius-xl  m-r15" type="button">View Profile</button></a></td>
                                 </tr>
 								<tr>
-                                    <td><h3>Category<img alt="" class="nd_learning_float_right" width="40" height="40" src="<?php echo plugins_url();?>/nd-learning/assets/img/icons/icon-typology-grey.svg"></h3></td>
+                                    <td><h3><img alt="" class="nd_learning_float_right" width="40" height="40" src="<?php echo plugins_url();?>/nd-learning/assets/img/icons/icon-typology-grey.svg">Category</h3></td>
                                     <td><?php echo $nd_learning_terms_category_course_results; ?> </td>
                                 </tr>
 								<tr>
-                                    <td><h3>Duration<img alt="" class="nd_learning_float_right" width="40" height="40" src="<?php echo plugins_url();?>/nd-learning/assets/img/icons/icon-duration-grey.svg"></h3></td>
+                                    <td><h3><img alt="" class="nd_learning_float_right" width="40" height="40" src="<?php echo plugins_url();?>/nd-learning/assets/img/icons/icon-duration-grey.svg">Duration</h3></td>
                                     <td><?php echo $nd_learning_terms_duration_course_results ; ?></td>
                                 </tr>
 								<tr>
-                                    <td><h3>Print<img alt="" class="nd_learning_float_right" width="40" height="40" src="<?php echo plugins_url();?>/nd-learning/assets/img/icons/icon-print-grey.svg"></h3></td>
+                                    <td><h3><img alt="" class="nd_learning_float_right" width="40" height="40" src="<?php echo plugins_url();?>/nd-learning/assets/img/icons/icon-print-grey.svg">Print</h3></td>
                                     <td><a class="nd_learning_cursor_pointer" onclick="window.print()">Click Here</a></td>
                                 </tr>
 							</table>
