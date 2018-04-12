@@ -270,21 +270,21 @@ if ( $nd_learning_meta_box_course_header_img != '' ) { ?>
                     <div class="nd_learning_section nd_learning_height_40"></div>
 
                 
-                    <div id="nd_learning_single_course_header_img_price" class="nd_learning_display_table nd_learning_float_right">
+                   <!-- <div id="nd_learning_single_course_header_img_price" class="nd_learning_display_table nd_learning_float_right">
 
                         <div class="nd_learning_display_table_cell nd_learning_vertical_align_bottom">
-                            <h5 class="nd_learning_font_size_20 nd_learning_color_white_important"><?php _e('per person','nd-learning'); ?> / </h5>
+                            <h5 class="nd_learning_font_size_20 nd_learning_color_white_important"><?php //_e('per person','nd-learning'); ?> / </h5>
                         </div>
                                 
                         <div class="nd_learning_display_table_cell nd_learning_vertical_align_top">
-                            <h5 class="nd_learning_font_size_20 nd_learning_color_white_important nd_learning_margin_5"><?php echo nd_learning_get_course_currency(); ?></h5>
+                            <h5 class="nd_learning_font_size_20 nd_learning_color_white_important nd_learning_margin_5"><?php //echo nd_learning_get_course_currency(); ?></h5>
                         </div>
 
                         <div class="nd_learning_display_table_cell nd_learning_vertical_align_bottom">
                             <h1 class=" nd_learning_color_white_important nd_learning_font_size_60 nd_learning_line_height_50">
                             	<?php 
                             		
-                            		if( nd_learning_get_course_price(get_the_ID()) == 0 ){
+                            		/*if( nd_learning_get_course_price(get_the_ID()) == 0 ){
 
 		                                 _e('Free','nd-learning');
 
@@ -292,13 +292,13 @@ if ( $nd_learning_meta_box_course_header_img != '' ) { ?>
 
 		                                echo nd_learning_get_course_price(get_the_ID());
 
-		                              }
+		                              }*/
 
                             	?>
                             </h1>
                         </div>
 
-                    </div> 
+                    </div> -->
 
 
                 </div>
@@ -322,17 +322,6 @@ if ( $nd_learning_meta_box_course_header_img != '' ) { ?>
 <?php } ?>
 
 
-
-
-<?php
-
-//add container
-$nd_learning_container = get_option('nd_learning_container');
-if ($nd_learning_container != 1) { echo '<div class="nd_learning_container nd_learning_clearfix">'; }
-
-?>
-
-
 <?php
 
 if(have_posts()) :
@@ -353,6 +342,7 @@ if(have_posts()) :
 
 	    //default
 	    $nd_learning_title_course = get_the_title();
+		$nd_learning_title_excerpt = get_the_excerpt();
 
 	    //metabox
 	    $nd_learning_meta_box_price = get_post_meta( get_the_ID(), 'nd_learning_meta_box_price', true );
@@ -388,402 +378,296 @@ if(have_posts()) :
 	    foreach($nd_learning_terms_location_course as $nd_learning_term_location_course) { $nd_learning_terms_location_course_results .= $nd_learning_term_location_course->name.' '; }
 	    foreach($nd_learning_terms_typology_course as $nd_learning_term_typology_course) { $nd_learning_terms_typology_course_results .= $nd_learning_term_typology_course->name.' '; }
 	    foreach($nd_learning_terms_duration_course as $nd_learning_term_duration_course) { $nd_learning_terms_duration_course_results .= $nd_learning_term_duration_course->name.' '; }
-
-	    
-	  	$nd_learning_result = '';
-	    
-	    $nd_learning_result .= '
-
-
-
-	    	<div class="nd_learning_section nd_learning_height_50"></div>
-			<div class="container">
-			<div class="row">
-	    	<div class="nd_learning_section">
-
-	    		<div class="nd_learning_width_66_percentage nd_learning_width_100_percentage_responsive nd_learning_float_left nd_learning_padding_15 nd_learning_box_sizing_border_box">';
-
-	    			echo $nd_learning_result;
-
-	    			//custom hook
-  					do_action("nd_learning_start_single_course_page");		
-
-	    $nd_learning_result = '
-
-	    			
-
-	    			<h1>'.$nd_learning_title_course.'</h1>
-	    			<div class="nd_learning_section nd_learning_height_20"></div>
-
-
-	    			<!--START some info course-->
-	    			<div class="nd_learning_section">
-
-	    				<div id="nd_learning_single_course_info_course_teacher" class="nd_learning_width_25_percentage nd_learning_width_50_percentage_all_iphone nd_learning_float_left">
-						    <div class="nd_learning_display_table nd_learning_float_left">
-						        
-						        <div class="nd_learning_display_table_cell nd_learning_vertical_align_middle">
-						            <img alt="" class="nd_learning_margin_right_10 nd_learning_float_left nd_learning_border_radius_100_percentage" width="40" height="40" src="'.$nd_learning_teacher_image_attributes[0].'">
-						        </div>
-
-						        <div class="nd_learning_display_table_cell nd_learning_vertical_align_middle">
-						            <p class="nd_learning_font_size_13">'.__('Teacher','nd-learning').'</p>
-						            <div class="nd_learning_section nd_learning_height_5"></div>
-						            <h5 class="">'.$nd_learning_teacher_name.'</h5>
-						        </div>
-
-						    </div> 
-						</div>
-
-
-
-						<div id="nd_learning_single_course_info_course_category" class="nd_learning_width_25_percentage nd_learning_width_50_percentage_all_iphone nd_learning_float_left">
-
-						    <div class="nd_learning_section nd_learning_height_5"></div>
-						    <div class="nd_learning_display_table nd_learning_float_left">
-						        
-						        <div class="nd_learning_display_table_cell nd_learning_vertical_align_middle">
-						            <img alt="" class="nd_learning_margin_right_10 nd_learning_float_left" width="30" height="30" src="'.plugins_url().'/nd-learning/assets/img/icons/icon-category.svg">
-						        </div>
-
-						        <div class="nd_learning_display_table_cell nd_learning_vertical_align_middle">
-						            <p class="nd_learning_font_size_13">'.__('Category','nd-learning').'</p>
-						            <div class="nd_learning_section nd_learning_height_5"></div>
-						            <h5 class="">'.$nd_learning_terms_category_course_results.'</h5>
-						        </div>
-
-						    </div> 
-						</div>
-
-
-
-						<div id="nd_learning_single_course_info_course_print" class="nd_learning_width_50_percentage nd_learning_display_none_all_iphone nd_learning_float_right">
-
-						    <div class="nd_learning_section nd_learning_height_5"></div>
-						    <div class="nd_learning_section nd_learning_height_5"></div>
-						    
-						    <div class="nd_learning_display_table nd_learning_float_right">
-						        <a class="nd_learning_cursor_pointer" onclick="window.print()"><img alt="" class="" width="30" height="30" src="'.plugins_url().'/nd-learning/assets/img/icons/icon-print-grey.svg"></a>
-						    </div> 
-						</div>
-
-
-	    			</div>
-	    			<!--END some info course-->
-
-	    			<div class="nd_learning_section nd_learning_height_20"></div>
-	    			';
-
-	    			
-
-
-	    			//image
+		
+		//image
 				    if ( has_post_thumbnail() ) {
 
 					  $nd_learning_image_id = get_post_thumbnail_id( get_the_ID() );
 					  $nd_learning_image_attributes = wp_get_attachment_image_src( $nd_learning_image_id, 'large' );
 					  $nd_learning_image_src = $nd_learning_image_attributes[0];
-
-				      $nd_learning_result .= '
-
-						<div class="nd_learning_section nd_learning_position_relative">
-						                                
-							<img alt="" class="nd_learning_section" src="'.$nd_learning_image_src.'">
-
-							<div class="nd_learning_bg_greydark_alpha_gradient nd_learning_position_absolute nd_learning_left_0 nd_learning_height_100_percentage nd_learning_width_100_percentage nd_learning_padding_20 nd_learning_box_sizing_border_box">
-							    <div class="nd_learning_position_absolute nd_learning_bottom_20">';
-							       
-
-							    //bookmark function
-						        if (function_exists('nd_learning_add_bookmark_button')) { $nd_learning_result .= nd_learning_add_bookmark_button(); }
-						        //compare function
-						        if (function_exists('nd_learning_add_compare_button')) { $nd_learning_result .= nd_learning_add_compare_button(); }
-
-
-						$nd_learning_result .= '</div>
-
-							</div>
-
-						</div>
-
-				      ';
-
-				    }
-
-
-
-
-
-
-
-	    			
-	    		   $nd_learning_result .= '<div class="nd_learning_section">';
-
-
-	    				echo $nd_learning_result;	
-
-	    				//custom hook
-        				do_action("nd_learning_shortcode_single_metabox_details");
-
-
-$nd_learning_result = '</div>
-
-
-					<div class="nd_learning_section nd_learning_height_40"></div>
-
-					<!--START Tabs-->
-					<div class="nd_learning_tabs nd_learning_section">
-
-						<ul class="nd_learning_list_style_none nd_learning_margin_0 nd_learning_padding_0 nd_learning_section nd_learning_border_bottom_2_solid_grey">';
-
-						echo $nd_learning_result;
-							 
-							//custom hook
-			    			do_action("nd_learning_single_course_tab_list");
-			    			do_action("nd_learning_single_course_tab_list_2"); 
-				    		
-
-						$nd_learning_result = '</ul>';
-					  
-
-					  	echo $nd_learning_result;
-					  	
-						//custom hook
-						do_action("nd_learning_single_course_tab_list_content"); 
-				    	
-					    
-			    	$nd_learning_result = '</div>
-			    	<!--END tabs-->';
-
-
-
-			    	$nd_learning_result .= '<script type="text/javascript">
-					<!--//--><![CDATA[//><!--
-						jQuery(document).ready(function($) {
-							$(".nd_learning_tabs").tabs();
-						});
-					//--><!]]>
-					</script>';
-
-					echo $nd_learning_result;
-
-					//custom hook
-  					do_action("nd_learning_end_single_course_page");
-
-
-$nd_learning_result = '</div>
-
-	    		<div class="nd_learning_width_33_percentage nd_learning_width_100_percentage_responsive nd_learning_float_left nd_learning_padding_15 nd_learning_box_sizing_border_box">';
-
-	    			echo $nd_learning_result;
-
-	    			//custom hook
-  					do_action("nd_learning_sidebar_single_course_page");
-
-
-  					$nd_learning_result = '<div class="nd_learning_section nd_learning_border_1_solid_grey">';
-  						echo $nd_learning_result;
-
-	  					
-  						//hook
-	  					do_action("nd_learning_sidebar_single_course_page_2");
-
-
-	  					$nd_learning_result = '<div id="nd_learning_single_course_all_book_buttons" class="nd_learning_section nd_learning_bg_grey nd_learning_border_top_1_solid_grey nd_learning_padding_20 nd_learning_box_sizing_border_box">';
-	  					echo $nd_learning_result;
-
-	  					//hook
-	  					do_action("nd_learning_sidebar_single_course_page_3");
-
-	  				$nd_learning_result = '</div></div>
-	  				<div class="nd_learning_section nd_learning_height_20"></div>
-	  				';
-
-
-
-  					$nd_learning_result .= '
-
-  					<style>#nd_learning_single_course_table_info tr:last-child { border-bottom-width:0px; }</style>
-
-					<table id="nd_learning_single_course_table_info" class="nd_learning_section">
-                        <tbody>';
-                            
-
-                        if ($nd_learning_meta_box_price != '') {
-
-                        	$nd_learning_result .= '<tr id="nd_learning_single_course_table_info_price" class="nd_learning_border_bottom_2_solid_grey">
-                                <td class="nd_learning_padding_20 "><img alt="" class="nd_learning_float_left" width="40" height="40" src="'.plugins_url().'/nd-learning/assets/img/icons/icon-price-grey.svg"></td>
-                                <td class="nd_learning_padding_20 "><h4 class=" nd_learning_text_align_right">'.__('Price ','nd-learning').' : '.$nd_learning_meta_box_price.'</h4></td>
-                            </tr>';
-
-                        }
-
-                        if ($nd_learning_meta_box_max_availability != '') {
-
-                        	$nd_learning_result .= '<tr id="nd_learning_single_course_table_info_max_availability" class="nd_learning_border_bottom_2_solid_grey">
-                                <td class="nd_learning_padding_20"><img alt="" class="nd_learning_float_left" width="40" height="40" src="'.plugins_url().'/nd-learning/assets/img/icons/icon-availability-grey.svg"></td>
-                                <td class="nd_learning_padding_20"><h4 class=" nd_learning_text_align_right">'.__('Max Availability ','nd-learning').' : '.$nd_learning_meta_box_max_availability.'</h4></td>
-                            </tr>';
-
-                        }
-
-                        /*if ($nd_learning_meta_box_date != '') {
-
-                        	$nd_learning_result .= '<tr class="nd_learning_border_bottom_2_solid_grey">
-                                <td class="nd_learning_padding_20 "><img alt="" class="nd_learning_float_left" width="40" src="'.plugins_url().'/nd-learning/assets/img/icons/icon-date-grey.svg"></td>
-                                <td class="nd_learning_padding_20 "><h4 class=" nd_learning_text_align_right">'.__('Date ','nd-learning').' : '.$nd_learning_meta_box_date.'</h4></td>
-                            </tr>';
-
-                        }*/
-
-                        if ($nd_learning_terms_difficulty_course_results != '') {
-
-                        	$nd_learning_result .= '<tr id="nd_learning_single_course_table_info_difficulty" class="nd_learning_border_bottom_2_solid_grey">
-                                <td class="nd_learning_padding_20 "><img alt="" class="nd_learning_float_left" width="40" height="40" src="'.plugins_url().'/nd-learning/assets/img/icons/icon-difficulty-grey.svg"></td>
-                                <td class="nd_learning_padding_20 "><h4 class=" nd_learning_text_align_right">'.__('Difficulty ','nd-learning').' : '.$nd_learning_terms_difficulty_course_results.'</h4></td>
-                            </tr>';
-
-                        }
-
-                        /*if ($nd_learning_terms_category_course_results != '') {
-
-                        	$nd_learning_result .= '<tr class="nd_learning_border_bottom_2_solid_grey">
-                                <td class="nd_learning_padding_20 "><img alt="" class="nd_learning_float_left" width="40" src="'.plugins_url().'/nd-learning/assets/img/icons/icon-category-grey.svg"></td>
-                                <td class="nd_learning_padding_20 "><h4 class=" nd_learning_text_align_right">'.__('Category ','nd-learning').' : '.$nd_learning_terms_category_course_results.'</h4></td>
-                            </tr>';
-
-                        }*/
-
-                        if ($nd_learning_terms_location_course_results != '') {
-
-                        	$nd_learning_result .= '<tr id="nd_learning_single_course_table_info_location" class="nd_learning_border_bottom_2_solid_grey">
-                                <td class="nd_learning_padding_20 "><img alt="" class="nd_learning_float_left" width="40" height="40" src="'.plugins_url().'/nd-learning/assets/img/icons/icon-location-grey.svg"></td>
-                                <td class="nd_learning_padding_20 "><h4 class=" nd_learning_text_align_right">'.__('Location ','nd-learning').' : '.$nd_learning_terms_location_course_results.'</h4></td>
-                            </tr>';
-
-                        }
-
-                        if ($nd_learning_terms_typology_course_results != '') {
-
-                        	$nd_learning_result .= '<tr id="nd_learning_single_course_table_info_typology" class="nd_learning_border_bottom_2_solid_grey">
-                                <td class="nd_learning_padding_20 "><img alt="" class="nd_learning_float_left" width="40" height="40" src="'.plugins_url().'/nd-learning/assets/img/icons/icon-typology-grey.svg"></td>
-                                <td class="nd_learning_padding_20 "><h4 class=" nd_learning_text_align_right">'.__('Typology ','nd-learning').' : '.$nd_learning_terms_typology_course_results.'</h4></td>
-                            </tr>';
-
-                        }
-
-                        /*if ($nd_learning_terms_duration_course_results != '') {
-
-                        	$nd_learning_result .= '<tr>
-                                <td class="nd_learning_padding_20 "><img alt="" class="nd_learning_float_left" width="40" src="'.plugins_url().'/nd-learning/assets/img/icons/icon-duration-grey.svg"></td>
-                                <td class="nd_learning_padding_20 "><h4 class=" nd_learning_text_align_right">'.__('Duration ','nd-learning').' : '.$nd_learning_terms_duration_course_results.'</h4></td>
-                            </tr>';
-
-                        }*/
- 
-
-                        $nd_learning_result .= '</tbody>
-                    </table>';
-
-
-
-                    //START contact form
-                    if ( $nd_learning_meta_box_form != '' ) {
-
-                    	$nd_learning_result .= '
-
-
-
-                    		<style>
-
-						    #nd_learning_single_course_contact_form input[type="text"],
-						    #nd_learning_single_course_contact_form input[type="email"],
-						    #nd_learning_single_course_contact_form input[type="url"],
-						    #nd_learning_single_course_contact_form input[type="tel"],
-						    #nd_learning_single_course_contact_form input[type="number"],
-						    #nd_learning_single_course_contact_form input[type="date"],
-						    #nd_learning_single_course_contact_form input[type="checkbox"],
-						    #nd_learning_single_course_contact_form input[type="file"],
-						    #nd_learning_single_course_contact_form textarea,
-						    #nd_learning_single_course_contact_form label,
-						    #nd_learning_single_course_contact_form select
-						    {
-
-						      width: 100%;
-
-						    }
-
-						    #nd_learning_single_course_contact_form .wpcf7-response-output.wpcf7-validation-errors,
-						    #nd_learning_single_course_contact_form .wpcf7-response-output.wpcf7-mail-sent-ok
-						    {
-
-						    	float:left;
-						    	width:100%;
-						    	box-sizing:border-box;
+					}
+					
+					//get variables
+				$nd_learning_content_course = do_shortcode(get_the_content());
+				
+				//teacher informations
+				$nd_learning_meta_box_teachers = get_post_meta( get_the_ID(), 'nd_learning_meta_box_teachers', true );
+
+				$nd_learning_meta_box_teacher_id = get_post_meta( get_the_ID(), 'nd_learning_meta_box_teacher', true );
+				$nd_learning_teacher_name = get_the_title($nd_learning_meta_box_teacher_id);
+				$nd_learning_teacher_permalink = get_permalink($nd_learning_meta_box_teacher_id);
+				$nd_learning_teacher_excerpt = get_the_excerpt($nd_learning_meta_box_teacher_id);
+				
+				//image teacher
+				$nd_learning_output_image_teacher = '';
+				$nd_learning_teacher_image_id = get_post_thumbnail_id( $nd_learning_meta_box_teacher_id );
+				$nd_learning_teacher_image_attributes = wp_get_attachment_image_src( $nd_learning_teacher_image_id, 'large' );
+				if ( $nd_learning_teacher_image_attributes[0] == '' ) { $nd_learning_output_image = ''; }else{
+				  $nd_learning_output_image_teacher .= '
+				  <img alt="" class="nd_learning_width_50_all_iphone nd_learning_margin_right_20 nd_learning_border_radius_100_percentage " width="100" src="'.$nd_learning_teacher_image_attributes[0].'">';
+				}
+				
+				//metabox teacher
+				$nd_learning_meta_box_teacher_color = get_post_meta( $nd_learning_meta_box_teacher_id, 'nd_learning_meta_box_teacher_color', true );
+				if ( $nd_learning_meta_box_teacher_color == '' ) { $nd_learning_meta_box_teacher_color = '#000'; }
+				$nd_learning_meta_box_teacher_role = get_post_meta( $nd_learning_meta_box_teacher_id, 'nd_learning_meta_box_teacher_role', true );
+				if ( $nd_learning_meta_box_teacher_role == '' ) { $nd_learning_meta_box_teacher_role = __('TEACHER','nd-learning'); }
+
+		?>
+
+ <!-- contact area -->
+        <div class="content-area">
+            <!-- Product details -->
+            <div class="container woo-entry">
+                <div class="row m-b30">
+                    <div class="blog-post blog-md date-style-2">
+                        <div class="col-md-4 col-sm-4 m-b30"> <a href="#"><img src="<?php echo $nd_learning_image_src; ?>" alt=""></a> </div>
+                        <div class="col-md-8 col-sm-8">
+                            <div class="rdx-post-title ">
+                                <h3 class="post-title"><a href="#"><?php echo $nd_learning_title_course; ?></a></h3>
+                            </div>
+                            <div class="rdx-post-text">
+                                <p class="m-b10"><?php echo $nd_learning_title_excerpt; ?></p>
+                            </div>
+                           
+                           <div class="row">
+                    <div class="col-md-12">
+                        <div class="rdx-tabs border-top product-description bg-tabs">
+                            <ul class="nav nav-tabs ">
+                                <li class="active"><a data-toggle="tab" href="#web-design-1"><i class="fa fa-globe"></i> <span class="title-head">Description</span></a></li>
+                                <li><a data-toggle="tab" href="#graphic-design-1"><i class="fa fa-photo"></i> <span class="title-head">Additional Information</span></a></li>
+								<li><a data-toggle="tab" href="#developement-1"><i class="fa fa-cog"></i> <span class="title-head">Main Tutors</span></a></li>
+                                <li><a data-toggle="tab" href="#developement-2"><i class="fa fa-cog"></i> <span class="title-head">Course Review</span></a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div id="web-design-1" class="tab-pane active">
+                                    <?php echo $nd_learning_content_course; ?>
+                                </div>
+                                <div id="graphic-design-1" class="tab-pane">
+                                     <table class="table table-bordered" >
+                                <tr>
+                                    <td><h3>Price<img alt="" class="nd_learning_float_right" width="40" height="40" src="<?php echo plugins_url();?>/nd-learning/assets/img/icons/icon-price-grey.svg"></h3></td>
+                                    <td><?php echo $nd_learning_meta_box_price; ?></td>
+                                </tr>
+                                <tr>
+                                    <td><h3>Availability<img alt="" class="nd_learning_float_right" width="40" height="40" src="<?php echo plugins_url();?>/nd-learning/assets/img/icons/icon-availability-grey.svg"></h3></td>
+                                    <td><?php echo $nd_learning_meta_box_max_availability; ?></td>
+                                </tr>
+                                <tr>
+                                    <td><h3>Tutor<img alt="" class="nd_learning_float_right" width="40" height="40" src="<?php echo plugins_url();?>/nd-learning/assets/img/icons/icon-availability-grey.svg"></h3></td>
+                                    <td><?php echo $nd_learning_teacher_name; ?><a href='<?php echo $nd_learning_teacher_permalink; ?>' target='_blank' > <button class="site-button yellow radius-xl  m-r15" type="button">View Profile</button></a></td>
+                                </tr>
+								<tr>
+                                    <td><h3>Category<img alt="" class="nd_learning_float_right" width="40" height="40" src="<?php echo plugins_url();?>/nd-learning/assets/img/icons/icon-typology-grey.svg"></h3></td>
+                                    <td><?php echo $nd_learning_terms_category_course_results; ?> </td>
+                                </tr>
+								<tr>
+                                    <td><h3>Duration<img alt="" class="nd_learning_float_right" width="40" height="40" src="<?php echo plugins_url();?>/nd-learning/assets/img/icons/icon-duration-grey.svg"></h3></td>
+                                    <td><?php echo $nd_learning_terms_duration_course_results ; ?></td>
+                                </tr>
+								<tr>
+                                    <td><h3>Print<img alt="" class="nd_learning_float_right" width="40" height="40" src="<?php echo plugins_url();?>/nd-learning/assets/img/icons/icon-print-grey.svg"></h3></td>
+                                    <td><a class="nd_learning_cursor_pointer" onclick="window.print()">Click Here</a></td>
+                                </tr>
+							</table>
+                                </div>
+                                <div id="developement-1" class="tab-pane">
+                                    <?php
+										//START ALL TEACHERS
+            	if ($nd_learning_meta_box_teacher_id == ''){
+            		
+            		$nd_learning_default_tabs_content .= __('Any teachers for this course','nd-learning');
+            	
+            	}else{
+
+            		
+            		//START MAIN TEACHER
+            		$nd_learning_default_tabs_content .= '
+
+		            	<!--START teacher-->
+		                <div class="nd_learning_section nd_learning_border_top_1_solid_grey nd_learning_padding_40_20 nd_learning_box_sizing_border_box">
+
+
+		                    <div class="nd_learning_display_table nd_learning_float_left">
+		                                
+		                        <div class="nd_learning_display_table_cell nd_learning_vertical_align_middle">
+		                        	'.$nd_learning_output_image_teacher.'
+		                        </div>
+
+		                        <div class="nd_learning_display_table_cell nd_learning_vertical_align_middle">
+		                            <h3 class=""><a class="nd_options_color_greydark nd_options_first_font" href="'.$nd_learning_teacher_permalink.'"><strong>'.$nd_learning_teacher_name.'</strong></a></h3>
+		                            <div class="nd_learning_section nd_learning_height_5"></div>
+		                            <h5 class="nd_options_color_grey">'.$nd_learning_meta_box_teacher_role.'</h5>
+		                            <div class="nd_learning_section nd_learning_height_20"></div>
+		                            <a style="background-color:'.$nd_learning_meta_box_teacher_color.';" class="site-button radius-xl m-r15 nd_learning_display_inline_block nd_learning_color_white_important nd_options_first_font nd_learning_padding_8 nd_learning_border_radius_3 nd_learning_font_size_13" href="'.$nd_learning_teacher_permalink.'">
+		                            	'.__('VIEW PROFILE','nd-learning').'
+		                            </a>
+		                          
+
+		                        </div>
+
+		                    </div>
+		            
+		                    <div class="nd_learning_section nd_learning_height_20"></div>
+
+		                    <p class="nd_learning_section">'.$nd_learning_teacher_excerpt.'</p>
+		                    
+
+		                </div>
+		                <!--END teacher-->';
+		                //END MAIN TEACHER
+
+
+
+		                //START  OTHER TEACHERS
+		                if ( $nd_learning_meta_box_teachers != '' ) {
+
+		                	//explode the string
+		            		$nd_learning_meta_box_teachers_array = explode(',', $nd_learning_meta_box_teachers);
+
+		            		//start cicle for display all teachers
+		            		for ($nd_learning_meta_box_teachers_array_i = 0; $nd_learning_meta_box_teachers_array_i < count($nd_learning_meta_box_teachers_array)-1; $nd_learning_meta_box_teachers_array_i++) {
+							    
+							    $nd_learning_page_by_path = get_page_by_path($nd_learning_meta_box_teachers_array[$nd_learning_meta_box_teachers_array_i],OBJECT,'teachers');
+							    
+							    //info teacher
+							    $nd_learning_teacher_id = $nd_learning_page_by_path->ID;
+							    $nd_learning_teacher_name = get_the_title($nd_learning_teacher_id);
+							    $nd_learning_teacher_permalink = get_permalink($nd_learning_teacher_id);
+							    $nd_learning_teacher_excerpt = get_the_excerpt($nd_learning_teacher_id);
+
+							    //image teacher
+							    $nd_learning_output_image_teacher = '';
+								$nd_learning_teacher_image_id = get_post_thumbnail_id( $nd_learning_teacher_id );
+								$nd_learning_teacher_image_attributes = wp_get_attachment_image_src( $nd_learning_teacher_image_id, 'large' );
+								if ( $nd_learning_teacher_image_attributes[0] == '' ) { $nd_learning_output_image = ''; }else{
+								  $nd_learning_output_image_teacher .= '
+								  <img alt="" class="nd_learning_width_50_all_iphone nd_learning_margin_right_20 nd_learning_border_radius_100_percentage " width="100" src="'.$nd_learning_teacher_image_attributes[0].'">';
+								}
+								
+								//metabox teacher
+								$nd_learning_meta_box_teacher_color = get_post_meta( $nd_learning_teacher_id, 'nd_learning_meta_box_teacher_color', true );
+								if ( $nd_learning_meta_box_teacher_color == '' ) { $nd_learning_meta_box_teacher_color = '#000'; }
+								$nd_learning_meta_box_teacher_role = get_post_meta( $nd_learning_teacher_id, 'nd_learning_meta_box_teacher_role', true );
+								if ( $nd_learning_meta_box_teacher_role == '' ) { $nd_learning_meta_box_teacher_role = __('TEACHER','nd-learning'); }
+
+
+							    $nd_learning_default_tabs_content .= '
+
+				            	<!--START teacher-->
+				                <div class="nd_learning_section nd_learning_border_top_1_solid_grey nd_learning_padding_40_20 nd_learning_box_sizing_border_box">
+
+
+				                    <div class="nd_learning_display_table nd_learning_float_left">
+				                                
+				                        <div class="nd_learning_display_table_cell nd_learning_vertical_align_middle">
+				                        	'.$nd_learning_output_image_teacher.'
+				                        </div>
+
+				                        <div class="nd_learning_display_table_cell nd_learning_vertical_align_middle">
+				                            <h3 class=""><a class="nd_options_color_greydark nd_options_first_font" href="'.$nd_learning_teacher_permalink.'"><strong>'.$nd_learning_teacher_name.'</strong></a></h3>
+				                            <div class="nd_learning_section nd_learning_height_5"></div>
+				                            <h5 class="nd_options_color_grey">'.$nd_learning_meta_box_teacher_role.'</h5>
+				                            <div class="nd_learning_section nd_learning_height_20"></div>
+				                            <a style="background-color:'.$nd_learning_meta_box_teacher_color.';" class="nd_learning_display_inline_block nd_learning_color_white_important nd_options_first_font nd_learning_padding_8 nd_learning_border_radius_3 nd_learning_font_size_13" href="'.$nd_learning_teacher_permalink.'">
+				                            	'.__('VIEW PROFILE','nd-learning').'
+				                            </a>
+				                          
+
+				                        </div>
+
+				                    </div>
+				            
+				                    <div class="nd_learning_section nd_learning_height_20"></div>
+
+				                    <p class="nd_learning_section">'.$nd_learning_teacher_excerpt.'</p>
+				                    
+
+				                </div>
+				                <!--END teacher-->';
 
 							}
 
-						    </style>
+		                }
+		                //END OTHER TEACHERS
 
+            	}
+            	//END ALL TEACHERS
+				echo $nd_learning_default_tabs_content;
+									?>
+                                </div>
+								<div id="developement-2" class="tab-pane active">
+                                    <div id="comments">
+                                        <ol class="commentlist">
+                                            <li class="comment">
+                                                <div class="comment_container"> <img class="avatar avatar-60 photo" src="images/testimonials/pic1.jpg" alt="">
+                                                    <div class="comment-text">
+                                                        <div  class="star-rating">
+                                                            <div data-rating='3'> <i class="fa fa-star" data-alt="1" title="regular"></i> <i class="fa fa-star" data-alt="2" title="regular"></i> <i class="fa fa-star-o" data-alt="3" title="regular"></i> <i class="fa fa-star-o" data-alt="4" title="regular"></i> <i class="fa fa-star-o" data-alt="5" title="regular"></i> </div>
+                                                        </div>
+                                                        <p class="meta"> <strong class="author">Cobus Bester</strong> <span><i class="fa fa-clock-o"></i> March 7, 2013</span> </p>
+                                                        <div class="description">
+                                                            <p>Really happy with this print. The colors are great, and the paper quality is very good.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="comment">
+                                                <div class="comment_container"> <img class="avatar avatar-60 photo" src="images/testimonials/pic2.jpg" alt="">
+                                                    <div class="comment-text">
+                                                        <div  class="star-rating">
+                                                            <div data-rating='3'> <i class="fa fa-star" data-alt="1" title="regular"></i> <i class="fa fa-star" data-alt="2" title="regular"></i> <i class="fa fa-star" data-alt="3" title="regular"></i> <i class="fa fa-star-o" data-alt="4" title="regular"></i> <i class="fa fa-star-o" data-alt="5" title="regular"></i> </div>
+                                                        </div>
+                                                        <p class="meta"> <strong class="author">Cobus Bester</strong> <span><i class="fa fa-clock-o"></i> March 7, 2013</span> </p>
+                                                        <div class="description">
+                                                            <p>Really happy with this print. The colors are great, and the paper quality is very good.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="comment">
+                                                <div class="comment_container"> <img class="avatar avatar-60 photo" src="images/testimonials/pic3.jpg" alt="">
+                                                    <div class="comment-text">
+                                                        <div  class="star-rating">
+                                                            <div data-rating='3'> <i class="fa fa-star" data-alt="1" title="regular"></i> <i class="fa fa-star" data-alt="2" title="regular"></i> <i class="fa fa-star" data-alt="3" title="regular"></i> <i class="fa fa-star" data-alt="4" title="regular"></i> <i class="fa fa-star-o" data-alt="5" title="regular"></i> </div>
+                                                        </div>
+                                                        <p class="meta"> <strong class="author">Cobus Bester</strong> <span><i class="fa fa-clock-o"></i> March 7, 2013</span> </p>
+                                                        <div class="description">
+                                                            <p>Really happy with this print. The colors are great, and the paper quality is very good.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ol>
+                                    </div>                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                           
+                           <!-- <form method="post" class="cart">
+                                <div class="quantity btn-quantity pull-left m-r10">
+                                    <input id="demo_vertical2" type="text" value="1" name="demo_vertical2"/>
+                                </div>
+                                <button class="btn btn-primary site-button pull-left"><i class="fa fa-cart-plus"></i> Add To Cart</button>
+                            </form> -->
+                        </div>
+                    </div>
+                </div>
+				
 
+                
+            </div>
+            <!-- Product details -->
+        </div>
+        <!-- contact area  END -->
+    </div>
+    <!-- Content END-->
 
-	                    	<div class="nd_learning_section nd_learning_height_20"></div>
-	                    	<div id="nd_learning_single_course_contact_form_container" class="nd_learning_section nd_learning_bg_white nd_learning_border_1_solid_grey">
+<?php
 
-	                          <div class="nd_learning_section nd_learning_padding_20 nd_learning_box_sizing_border_box nd_learning_bg_grey nd_learning_border_bottom_1_solid_grey nd_learning_text_align_center">
-	                            <h3 class=""><strong>'.__('Question','nd-learning').'</strong></h3>
-	                          </div>
-	                          <div id="nd_learning_single_course_contact_form" class="nd_learning_section nd_learning_padding_20 nd_learning_box_sizing_border_box">
-	                            
-	                          		'.do_shortcode('[contact-form-7 id="'.$nd_learning_meta_box_form.'"]').' 
-
-	                          </div>  
-
-	                        </div>
-
-
-
-	                    ';
-
-                    }
-                    //END contact form
-
-                    
-
-
-
-
-
-$nd_learning_result .= '</div>
-
-	    	</div></div></div>
-
-
-	    	<div class="nd_learning_section nd_learning_height_50"></div>
-
-	    ';
-
-
-	    //START BOTTOM BAR
-	    $nd_learning_result .= '
-
-	    	<!--<div class="nd_learning_position_fixed nd_learning_bottom_0 nd_learning_left_0 nd_learning_section nd_learning_padding_20 nd_learning_box_sizing_border_box nd_learning_bg_greydark">
-
-	    		<p>test</p>
-
-	    	</div>-->
-
-
-	    ';
-	    //END BOTTOM BAR
-	    
-
-
-		echo $nd_learning_result;    
-	    
-
-	    
-	endwhile;
+endwhile;
 endif;
 
 ?>
