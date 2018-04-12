@@ -26,7 +26,7 @@ do_action('sjb_job_application_before');
 <!-- Start Job Application Form
 ================================================== -->
 <form class="jobpost-form" id="sjb-application-form" name="c-assignments-form"  enctype="multipart/form-data">
-    <h3><?php echo apply_filters('sjb_job_application_form_title', esc_html__('Apply Online', 'simple-job-board')); ?></h3>    
+    <!-- <h3><?php //echo apply_filters('sjb_job_application_form_title', esc_html__('Apply Online', 'simple-job-board')); ?></h3>  -->  
     <div class="row">
         <div class="col-md-12">
             <?php
@@ -158,7 +158,9 @@ do_action('sjb_job_application_before');
                     . '<input type="file" name="applicant_resume" id="applicant-resume" class="sjb-attachment form-control "' . apply_filters('sjb_resume_required', 'required="required"') . '>'
                     . '<span class="sjb-invalid-attachment validity-note" id="file-error-message"></span>'
                     . '</div>';
-            echo apply_filters('sjb_attach_resume', $sjb_attach_resume);
+            //echo apply_filters('sjb_attach_resume', $sjb_attach_resume);
+			 $success_alert = '<div class="clearfix"></div><div class="alert alert-success" role="alert">'. apply_filters( 'sjb_job_submission_alert', __('<b>Send your resume at acme.learning76@gmail.com</b>', 'simple-job-board') ) .'</div>';
+			echo $success_alert;
 
             /**
              * Fires on job detail page before job submit button. 
@@ -172,7 +174,7 @@ do_action('sjb_job_application_before');
             <input type="hidden" name="action" value="process_applicant_form" >
             <input type="hidden" name="wp_nonce" value="<?php echo wp_create_nonce('jobpost_security_nonce') ?>" >
             <div class="form-group" id="sjb-form-padding-button">
-                <button class="btn btn-primary app-submit"><?php esc_html_e('Submit', 'simple-job-board'); ?></button>
+                <!-- <button class="btn btn-primary app-submit"><?php //esc_html_e('Submit', 'simple-job-board'); ?></button> -->
             </div>
         </div>    
     </div>

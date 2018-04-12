@@ -287,7 +287,7 @@ if ( $nd_learning_meta_box_teacher_header_img != '' ) { ?>
                             <div class="nd_learning_section nd_learning_height_5"></div>
                             <h3 class="nd_learning_color_white_important"><?php echo nd_learning_get_teacher_role(); ?></h3>
                             <div class="nd_learning_section nd_learning_height_30"></div>
-                            <a class="nd_learning_display_inline_block nd_learning_color_white_important nd_learning_line_height_16 nd_learning_border_1_solid_white nd_options_first_font nd_learning_padding_10_20 nd_learning_border_radius_3" href="#nd_learning_single_teacher_contact_form"><?php _e('MESSAGE ME','nd-learning'); ?></a>
+                            <!-- <a class="nd_learning_display_inline_block nd_learning_color_white_important nd_learning_line_height_16 nd_learning_border_1_solid_white nd_options_first_font nd_learning_padding_10_20 nd_learning_border_radius_3" href="#nd_learning_single_teacher_contact_form"><?php //_e('MESSAGE ME','nd-learning'); ?></a> -->
                         
                             <?php do_action('nd_learning_single_teacher_header_btns'); ?>
 
