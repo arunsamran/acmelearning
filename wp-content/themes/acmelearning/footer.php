@@ -10,7 +10,7 @@
 					<div class="col-md-4 col-sm-6 footer-col-4">
 						<div class="widget widget_about">
 							<div class="logo-footer"><img src="<?php bloginfo('template_url'); ?>/images/logo-white.png" alt=""></div>
-							<p class="m-tb20"><strong>ACME</strong> Lorem ipsum dolor sit amet, cons ectetur elit. Vestibulum nec odios Suspe ndisse cursus.  cons ectetur elit. Vestibulum nec odios Lorem ipsum dolor sit amet, cons ectetur elit. Vestibulum nec.</p>
+							<p class="m-tb20"><strong>ACME</strong> learning centers are private institutions that were founded in 2017. ACME Education is a fast-growing, technology-driven company revolutionising the education system in India.</p>
 							<ul class="rdx-social-icon border rdx-social-icon-lg">
 								<li><a target="_blank" href="https://www.facebook.com/ACME-Learning-2112227632125891/" class="fa fa-facebook fb-btn"></a></li>
 								<li><a target="_blank" href="https://twitter.com/acme_learning" class="fa fa-twitter tw-btn"></a></li>
